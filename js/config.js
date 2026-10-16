@@ -1,7 +1,7 @@
 // 청첩장 설정 파일: 이 파일만 수정하면 문구, 날짜, 계좌, 연동 주소가 모두 바뀝니다.
 const CONFIG = {
   // 구글 앱스크립트 웹앱 URL (apps-script/Code.gs 배포 후 입력). 비워두면 참석/방명록이 저장되지 않습니다.
-  apiUrl: "",
+  apiUrl: "https://script.google.com/macros/s/AKfycbx-pInmEE6ZElLHQI-lQGJ0WC6VrLQpWNAUN0tDpFZU0lKNx5G7_Zs1QODrjWfmy5DN0Q/exec",
 
   groom: {
     name: "최재필",
