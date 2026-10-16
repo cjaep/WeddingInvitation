@@ -224,9 +224,10 @@
   // ───── 5. 지도 앱 연결 ─────
   function renderMapLinks() {
     const q = CONFIG.mapQuery;
-    $("#mapKakao").href = `https://map.kakao.com/?q=${enc(q)}`;
+    // 페이지 안의 지도 미리보기 (API 키 없이 표시되는 구글 지도 임베드)
+    $("#mapFrame").src = `https://www.google.com/maps?q=${enc(q)}&output=embed`;
     $("#mapNaver").href = `https://map.naver.com/v5/search/${enc(q)}`;
-    $("#mapGoogle").href = `https://www.google.com/maps/search/?api=1&query=${enc(q)}`;
+    $("#mapKakao").href = `https://map.kakao.com/?q=${enc(q)}`;
     $("#mapTmap").href = `tmap://search?name=${enc(CONFIG.mapName)}`;
   }
 

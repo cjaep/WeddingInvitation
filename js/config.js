@@ -37,7 +37,7 @@ const CONFIG = {
 
   // 갤러리: assets/photos/01.jpg ~ 로 넣으면 자동 연결됩니다. 사진이 없으면 자리표시자가 보입니다.
   gallery: {
-    count: 18,
+    count: 2, // 사진을 더 넣으면 이 숫자를 늘리세요 (예: 18)
     path: "assets/photos/",
     ext: "jpg",
   },
