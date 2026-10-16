@@ -224,38 +224,11 @@
   // ───── 5. 지도 앱 연결 ─────
   function renderMapLinks() {
     const q = CONFIG.mapQuery;
-    $("#mapNaverOpen").href = `https://map.naver.com/v5/search/${enc(q)}`;
-    $("#mapGoogle").href = `https://www.google.com/maps/search/?api=1&query=${enc(q)}`;
+    // 페이지 안의 지도 미리보기 (API 키 없이 표시되는 구글 지도 임베드)
+    $("#mapFrame").src = `https://www.google.com/maps?q=${enc(q)}&output=embed`;
+    $("#mapNaver").href = `https://map.naver.com/v5/search/${enc(q)}`;
     $("#mapKakao").href = `https://map.kakao.com/?q=${enc(q)}`;
     $("#mapTmap").href = `tmap://search?name=${enc(CONFIG.mapName)}`;
-    loadNaverMap();
-  }
-
-  function showMapFallback() {
-    $("#naverMap").hidden = true;
-    $("#mapFallback").hidden = false;
-  }
-
-  // 네이버 지도 API (키가 있을 때만 불러옵니다)
-  function loadNaverMap() {
-    if (!CONFIG.naverMapKeyId) return showMapFallback();
-    const script = document.createElement("script");
-    script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${enc(CONFIG.naverMapKeyId)}&submodules=geocoder`;
-    script.onload = initNaverMap;
-    script.onerror = showMapFallback;
-    document.head.appendChild(script);
-  }
-
-  function initNaverMap() {
-    if (!window.naver || !naver.maps || !naver.maps.Service) return showMapFallback();
-    naver.maps.Service.geocode({ query: CONFIG.geocodeQuery }, (status, response) => {
-      const item = response && response.v2 && response.v2.addresses && response.v2.addresses[0];
-      if (status !== naver.maps.Service.Status.OK || !item) return showMapFallback();
-
-      const center = new naver.maps.LatLng(Number(item.y), Number(item.x));
-      const map = new naver.maps.Map("naverMap", { center, zoom: 16 });
-      new naver.maps.Marker({ position: center, map, title: CONFIG.wedding.venue });
-    });
   }
 
   // ───── 6. 참석 여부 ─────

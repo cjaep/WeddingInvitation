@@ -58,19 +58,6 @@ assets/bgm.mp3        # 배경음악 (직접 넣기)
 3. 저장소 **Settings > Pages**에서 Source를 `Deploy from a branch`, Branch를 `main` / `(root)`로 선택합니다.
 4. 몇 분 뒤 `https://<아이디>.github.io/wedding-invitation/` 주소로 접속할 수 있습니다.
 
-## 6. 네이버 지도 연결 (메인 지도)
-
-네이버 지도는 API 키가 있어야 페이지 안에 표시됩니다. 키가 없으면 지도 자리에 주소와 "네이버 지도에서 보기" 버튼이 나옵니다.
-
-1. https://www.ncloud.com 에 가입하고 **NAVER Cloud Platform 콘솔**에 들어갑니다.
-2. **AI·NAVER API > Maps**에서 애플리케이션을 등록합니다. (이름은 자유롭게 입력)
-3. **Web 서비스 URL**에 사용할 주소를 넣습니다.
-   - GitHub Pages 주소: `https://cjaep.github.io`
-   - 테스트용: `http://localhost`
-4. 발급된 **Client ID**(ncpKeyId)를 `js/config.js`의 `naverMapKeyId`에 넣습니다.
-
-> 메뉴 이름은 콘솔 개편에 따라 조금 다를 수 있습니다. 키 이름이 `ncpKeyId`인지 확인해 주세요.
-
 ## 확인이 필요한 항목
 
 - 그레이스홀이 양재 엘타워 건물 안에 있는지 (검색으로는 건물 주소만 확인했습니다. 웨딩홀 측에 확인해 주세요).

@@ -63,11 +63,7 @@ const CONFIG = {
     { value: "bride", label: "신부측" },
   ],
 
-  // 네이버 지도 API 키 (NAVER Cloud Platform에서 발급, README 참고). 비워두면 주소와 버튼만 보입니다
-  naverMapKeyId: "",
-
-  // 지도 위치 찾기와 지도 앱 검색에 쓰는 주소
-  geocodeQuery: "서울특별시 서초구 강남대로 213",
+  // 지도 미리보기와 지도 앱 검색에 쓰는 주소
   mapQuery: "서울 서초구 강남대로 213 엘타워",
   mapName: "양재 엘타워",
 };
