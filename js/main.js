@@ -227,8 +227,9 @@
     // 페이지 안의 지도 미리보기 (API 키 없이 표시되는 구글 지도 임베드)
     $("#mapFrame").src = `https://www.google.com/maps?q=${enc(q)}&output=embed`;
     $("#mapNaver").href = `https://map.naver.com/v5/search/${enc(q)}`;
-    // 카카오내비 전용 링크는 목적지 좌표가 필요해서, 우선 카카오맵 검색 링크로 연결합니다
-    $("#mapKakaoNavi").href = `https://map.kakao.com/?q=${enc(q)}`;
+    // 카카오 길찾기 링크: 목적지 좌표를 넣으면 카카오맵/카카오내비에서 바로 길안내가 시작됩니다
+    const { name, lat, lng } = CONFIG.destination;
+    $("#mapKakaoNavi").href = `https://map.kakao.com/link/to/${enc(name)},${lat},${lng}`;
     $("#mapTmap").href = `tmap://search?name=${enc(CONFIG.mapName)}`;
   }
 

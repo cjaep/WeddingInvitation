@@ -65,5 +65,7 @@ const CONFIG = {
 
   // 지도 미리보기와 지도 앱 검색에 쓰는 주소
   mapQuery: "서울 서초구 강남대로 213 엘타워",
+  // 카카오내비 목적지 좌표 (강남대로 213 엘타워 기준, OpenStreetMap 데이터)
+  destination: { name: "엘타워", lat: 37.4827304, lng: 127.0348468 },
   mapName: "양재 엘타워",
 };
