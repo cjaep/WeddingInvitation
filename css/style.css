@@ -101,7 +101,7 @@ button, input, textarea { font: inherit; color: inherit; }
   letter-spacing: 0.04em;
 }
 .heart { color: #e8b4b0; }
-.cover-date, .cover-venue { margin: 2px 0; font-size: 16px; }
+.cover-date, .cover-venue { margin: 2px 0; font-size: 16px; font-weight: 300; }
 .dday {
   margin-top: 22px;
   display: inline-block;
@@ -253,7 +253,7 @@ main { max-width: 560px; margin: 0 auto; }
   flex: 1 1 0;
   justify-content: center;
   padding: 8px;
-  border-radius: 0;
+  border-radius: 10px;
   background: var(--white);
   border: 0;
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.1);
